@@ -1,0 +1,13 @@
+<div class="list-group-item">
+  <button #doneBtn class="badge badge-pill badge-info float-left" (click)="onClickDoneButton(todo)">v</button>
+  <ng-container *ngIf="todo.isDone;then done; else notDone "></ng-container>
+  <button #removeBtn class="badge badge-pill badge-success float-right" (click)="onClickRemoveButton(todo)">x</button>
+</div>
+
+<ng-template #done>
+  <s>{{todo.title}}</s>
+</ng-template>
+
+<ng-template #notDone>
+  {{todo.title}}
+</ng-template>

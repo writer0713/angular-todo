@@ -1,0 +1,5 @@
+<div class="list-group">
+  <ng-container *ngFor="let todo of todoService.getTodoList()">
+      <app-todo-item [todo]="todo"></app-todo-item>
+  </ng-container>
+</div>
