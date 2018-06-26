@@ -16,3 +16,5 @@ Angular : 6.0.6
 - [x] Using @Input Directive
 - [ ] Using LocalStorage
 - [ ] Using Firebase
+- [ ] Optimization
+- [ ] Deploy
