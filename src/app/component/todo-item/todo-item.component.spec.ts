@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoItemComponent } from './todo-item.component';
+import { Todo } from '../../model/todo';
 
-describe('TodoItemComponent', () => {
+fdescribe('TodoItemComponent', () => {
   let component: TodoItemComponent;
   let fixture: ComponentFixture<TodoItemComponent>;
 
@@ -16,6 +17,7 @@ describe('TodoItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TodoItemComponent);
     component = fixture.componentInstance;
+    component.todo = new Todo('test');
     fixture.detectChanges();
   });
 
