@@ -1,4 +1,4 @@
-<div class="list-group-item">
+<div class="list-group-item" TodoHover color='#E6E6E6'>
   <button #doneBtn class="badge badge-pill badge-info float-left" (click)="onClickDoneButton(todo)">v</button>
   <ng-container *ngIf="todo.isDone;then done; else notDone "></ng-container>
   <button #removeBtn class="badge badge-pill badge-success float-right" (click)="onClickRemoveButton(todo)">x</button>
