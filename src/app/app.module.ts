@@ -8,6 +8,7 @@ import { TodoItemComponent } from './component/todo-item/todo-item.component';
 import { InputComponent } from './component/input/input.component';
 import { TodoHoverDirective } from './directives/todo-hover.directive';
 import { QuakeDirective } from './directives/quake.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuakeDirective } from './directives/quake.directive';
     TodoItemComponent,
     InputComponent,
     TodoHoverDirective,
-    QuakeDirective
+    QuakeDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule
