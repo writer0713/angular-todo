@@ -14,6 +14,7 @@ Angular : 6.0.6
 - [x] Separate Components
 - [x] Using RxJS
 - [x] Using @Input Directive
+- [x] Using Custom @Directive
 - [ ] Using LocalStorage
 - [ ] Using Firebase
 - [ ] Optimization
