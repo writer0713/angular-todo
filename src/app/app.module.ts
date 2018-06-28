@@ -7,6 +7,7 @@ import { TodoListComponent } from './component/todo-list/todo-list.component';
 import { TodoItemComponent } from './component/todo-item/todo-item.component';
 import { InputComponent } from './component/input/input.component';
 import { TodoHoverDirective } from './directives/todo-hover.directive';
+import { QuakeDirective } from './directives/quake.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TodoHoverDirective } from './directives/todo-hover.directive';
     TodoListComponent,
     TodoItemComponent,
     InputComponent,
-    TodoHoverDirective
+    TodoHoverDirective,
+    QuakeDirective
   ],
   imports: [
     BrowserModule
