@@ -18,4 +18,4 @@ Angular : 6.0.6
 - [ ] Using LocalStorage
 - [ ] Using Firebase
 - [ ] Optimization
-- [ ] Deploy
+- [x] Deploy
