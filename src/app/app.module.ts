@@ -29,9 +29,10 @@ import { TodoService } from "./service/todo.service";
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: "", component: HomeComponent },
+      { path: "", redirectTo: "/home", pathMatch: "full" },
+      { path: "home", component: HomeComponent },
       { path: "about", component: AboutComponent },
-      { path: "**", redirectTo: "/" }
+      { path: "**", redirectTo: "/home" }
     ])
   ],
   providers: [TodoService],
