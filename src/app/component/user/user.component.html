@@ -1,0 +1,14 @@
+<div class="card">
+  <img class="card-img-top" [src]="getProfileImage(user.id)" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ user.name }}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID : {{ user.id }}</li>
+    <li class="list-group-item">USERNAME : {{ user.username }}</li>
+    <li class="list-group-item">COMPANY : {{ user.company.name }}</li>
+  </ul>
+  <div class="card-body">
+    <a routerLink="{{ '/people/' + user.id }}" class="card-link">Personal Todos</a>
+  </div>
+</div>

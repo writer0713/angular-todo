@@ -1,16 +1,14 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 
 @Directive({
-  selector: '[TodoHover]'
+  selector: "[TodoHover]"
 })
 export class TodoHoverDirective {
-
   defaultColor: string;
-  @Input() color: string;
+  @Input()
+  color: string;
 
-  constructor(
-    public el: ElementRef
-  ) { 
+  constructor(public el: ElementRef) {
     console.log(this.el);
   }
 
@@ -18,14 +16,13 @@ export class TodoHoverDirective {
     this.defaultColor = this.el.nativeElement.style.backgroundColor;
   }
 
-  @HostListener('mouseenter')
+  @HostListener("mouseenter")
   mouseEnter() {
-    this.el.nativeElement.style.backgroundColor = this.color || 'yellow';
+    this.el.nativeElement.style.backgroundColor = this.color || "yellow";
   }
 
-  @HostListener('mouseleave')
+  @HostListener("mouseleave")
   mouseLeave() {
     this.el.nativeElement.style.backgroundColor = this.defaultColor;
   }
-
 }

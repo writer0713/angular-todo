@@ -1,0 +1,14 @@
+<div class="container users">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 text-center">
+      <h1 class="display-1 text-info">{{ title }}</h1>
+
+      <hr>
+
+      <ng-container *ngFor="let user of users; let index = index">
+        <user [user]="user" class="m-2"></user>
+      </ng-container>
+
+    </div>
+  </div>
+</div>
