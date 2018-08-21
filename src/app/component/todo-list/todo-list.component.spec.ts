@@ -1,17 +1,17 @@
-import { TodoItemComponent } from './../todo-item/todo-item.component';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TodoItemComponent } from "./../todo-item/todo-item.component";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TodoListComponent } from './todo-list.component';
+import { TodoListComponent } from "./todo-list.component";
 
-describe('TodoListComponent', () => {
+describe("TodoListComponent", () => {
   let component: TodoListComponent;
   let fixture: ComponentFixture<TodoListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ 
+      declarations: [
         TodoListComponent,
-        TodoItemComponent 
+        TodoItemComponent
       ]
     })
     .compileComponents();
@@ -24,7 +24,7 @@ describe('TodoListComponent', () => {
     component.ngOnInit();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

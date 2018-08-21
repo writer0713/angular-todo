@@ -13,11 +13,7 @@ export class PersonalTodoComponent implements OnInit {
   todos: Todo[];
 
   constructor(public route: ActivatedRoute, public todoService: TodoService) {
-    console.log("constructor");
-
     this.route.paramMap.subscribe(params => {
-      console.log(params);
-
       const userId: number = +params.get("userId");
       this.todoService
         .getTodosFromRemote(userId)

@@ -27,9 +27,9 @@ export class InputComponent implements OnInit {
   }
 
   onKeyupEnter() {
-    let input = this.input.nativeElement;
-    let keyup = fromEvent(input, "keyup");
-    let enter = keyup.pipe(
+    const input = this.input.nativeElement;
+    const keyup = fromEvent(input, "keyup");
+    const enter = keyup.pipe(
       filter((ev: any) => ev.keyCode === 13),
       filter(() => input.value),
       throttleTime(600)

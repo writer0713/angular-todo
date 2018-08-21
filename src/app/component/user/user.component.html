@@ -9,6 +9,6 @@
     <li class="list-group-item">COMPANY : {{ user.company.name }}</li>
   </ul>
   <div class="card-body">
-    <a routerLink="{{ '/people/' + user.id }}" class="card-link">Personal Todos</a>
+    <a [routerLink]="[ '/people/', user.id ]" class="card-link">Personal Todos</a>
   </div>
 </div>

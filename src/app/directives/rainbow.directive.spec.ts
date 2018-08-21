@@ -1,7 +1,7 @@
-import { RainbowDirective } from './rainbow.directive';
+import { RainbowDirective } from "./rainbow.directive";
 
-describe('RainbowDirective', () => {
-  it('should create an instance', () => {
+describe("RainbowDirective", () => {
+  it("should create an instance", () => {
     const directive = new RainbowDirective();
     expect(directive).toBeTruthy();
   });
