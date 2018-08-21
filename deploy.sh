@@ -1,0 +1,1 @@
+ng build --prod --base-href "https://writer0713.github.io/angular-todo/" && ngh --dir dist/angular-todo
