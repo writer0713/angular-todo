@@ -1,7 +1,6 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { RouterModule } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { AboutComponent } from "./component/about/about.component";
 import { HomeComponent } from "./component/home/home.component";
@@ -17,6 +16,7 @@ import { RainbowDirective } from "./directives/rainbow.directive";
 import { TodoHoverDirective } from "./directives/todo-hover.directive";
 import { TodoService } from "./service/todo.service";
 import { UserService } from "./service/user.service";
+import { RoutingModule } from "./modules/routing/routing.module";
 
 @NgModule({
   declarations: [
@@ -34,18 +34,7 @@ import { UserService } from "./service/user.service";
     UserComponent,
     PersonalTodoComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot([
-      { path: "", redirectTo: "/home", pathMatch: "full" },
-      { path: "home", component: HomeComponent },
-      { path: "people/:userId", component: PersonalTodoComponent },
-      { path: "people", component: UsersComponent },
-      { path: "about", component: AboutComponent },
-      { path: "**", redirectTo: "/home" }
-    ])
-  ],
+  imports: [BrowserModule, HttpClientModule, RoutingModule],
   providers: [TodoService, UserService],
   bootstrap: [AppComponent]
 })
