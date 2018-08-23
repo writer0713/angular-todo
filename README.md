@@ -10,6 +10,9 @@ Angular : 6.0.6
 
 <hr>
 
+### Demo
+https://writer0713.github.io/angular-todo/home
+
 ### Todos
 
 - [x] Bootstrap Setting
