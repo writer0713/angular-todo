@@ -13,7 +13,10 @@ Angular : 6.0.6
 ### Todos
 
 - [x] Bootstrap Setting
+- [x] Multiple Modules Architecturing
 - [x] Separate Components
+- [x] Using Routers
+- [x] Using Lazy Load
 - [x] Using RxJS
 - [x] Using @Input Directive
 - [x] Using Custom @Directive
