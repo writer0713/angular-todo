@@ -3,9 +3,7 @@ import { Injectable } from "@angular/core";
 import { map } from "rxjs/operators";
 import { Todo } from "../model/todo";
 
-@Injectable({
-  providedIn: "root"
-})
+@Injectable()
 export class TodoService {
   todos: Map<Todo, Todo>;
 

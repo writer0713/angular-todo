@@ -12,7 +12,9 @@ export class UsersComponent implements OnInit {
 
   public users: User[];
 
-  constructor(public userService: UserService) {}
+  constructor(public userService: UserService) {
+    console.log("users Component");
+  }
 
   ngOnInit() {
     this.initUsers();

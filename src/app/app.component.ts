@@ -7,5 +7,5 @@ import { UserService } from "./peopleModule/services/user.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(public userService: UserService) {}
+  constructor() {}
 }

@@ -3,13 +3,13 @@ import { Injectable } from "@angular/core";
 import { map } from "rxjs/operators";
 import { User } from "../model/user";
 
-@Injectable({
-  providedIn: "root"
-})
+@Injectable()
 export class UserService {
   people: User[];
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) {
+    console.log("User Serivce");
+  }
 
   public getUsers() {
     return this.http
