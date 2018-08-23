@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Todo } from "src/app/model/todo";
 import { map } from "rxjs/operators";
+import { Todo } from "../model/todo";
 
 @Injectable({
   providedIn: "root"

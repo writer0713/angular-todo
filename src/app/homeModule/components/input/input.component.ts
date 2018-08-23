@@ -1,14 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { Observable, fromEvent } from "rxjs";
-import {
-  filter,
-  debounceTime,
-  distinct,
-  throttleTime,
-  distinctUntilChanged
-} from "rxjs/operators";
-import { Todo } from "../../model/todo";
-import { TodoService } from "../../service/todo.service";
+import { filter, throttleTime } from "rxjs/operators";
+import { TodoService } from "../../../shared/services/todo.service";
+import { Todo } from "../../../shared/model/todo";
 
 @Component({
   selector: "app-input",

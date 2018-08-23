@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, ViewChild } from "@angular/core";
-import { Todo } from "../../model/todo";
-import { fromEvent } from "rxjs";
-import { TodoService } from "../../service/todo.service";
+import { Todo } from "../../../shared/model/todo";
+import { TodoService } from "../../../shared/services/todo.service";
 
 @Component({
   selector: "app-todo-item",

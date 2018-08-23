@@ -1,27 +1,20 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { HomeComponent } from "../component/home/home.component";
-import { UsersComponent } from "../component/users/users.component";
-import { PersonalTodoComponent } from "../component/personal-todo/personal-todo.component";
-import { AboutComponent } from "../component/about/about.component";
+import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
+  {
+    path: "home",
+    loadChildren: "../homeModule/home.module#HomeModule"
+  },
   {
     path: "people",
-    children: [
-      {
-        path: "",
-        component: UsersComponent
-      },
-      {
-        path: ":userId",
-        component: PersonalTodoComponent
-      }
-    ]
+    loadChildren: "../peopleModule/people.module#PeopleModule"
   },
-  { path: "about", loadChildren: AboutComponent },
+  {
+    path: "about",
+    loadChildren: "../aboutModule/about.module#AboutModule"
+  },
   { path: "**", redirectTo: "/home" }
 ];
 

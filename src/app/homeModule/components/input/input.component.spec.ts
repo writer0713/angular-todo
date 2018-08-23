@@ -1,13 +1,12 @@
-import { TodoService } from "./../../service/todo.service";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { InputComponent } from "./input.component";
-import { Todo } from "../../model/todo";
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
+import { TodoService } from "../../../shared/services/todo.service";
+import { Todo } from "../../../shared/model/todo";
 
 class MockTodoService extends TodoService {
-
   getTodoList() {
     return [new Todo("1"), new Todo("2")];
   }
@@ -22,13 +21,12 @@ describe("InputComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputComponent ],
+      declarations: [InputComponent],
       providers: [
         TodoService
         //{provide: TodoService, useClass: MockTodoService}
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,7 +36,6 @@ describe("InputComponent", () => {
 
     input = fixture.debugElement.query(By.css("input"));
     fixture.detectChanges();
-
   });
 
   it("should create", () => {
@@ -46,7 +43,10 @@ describe("InputComponent", () => {
   });
 
   it("can add todo", () => {
-    spyOn(todoService, "getTodoList").and.returnValues([new Todo("1"), new Todo("2")]);
+    spyOn(todoService, "getTodoList").and.returnValues([
+      new Todo("1"),
+      new Todo("2")
+    ]);
 
     const length1 = todoService.getTodoList().length;
     expect(length1).toEqual(2);
@@ -56,6 +56,4 @@ describe("InputComponent", () => {
     console.log("mock Todo Service : ", todoService.getTodoList());
     expect(todoService.getTodoList().length).toBe(2);
   });
-
-
 });

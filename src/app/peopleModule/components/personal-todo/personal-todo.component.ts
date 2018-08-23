@@ -1,7 +1,7 @@
-import { TodoService } from "./../../service/todo.service";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Todo } from "../../model/todo";
+import { Todo } from "../../../shared/model/todo";
+import { TodoService } from "../../../shared/services/todo.service";
 
 @Component({
   selector: "personal-todo",
