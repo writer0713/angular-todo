@@ -1,8 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { Observable, fromEvent } from "rxjs";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { fromEvent } from "rxjs";
 import { filter, throttleTime } from "rxjs/operators";
-import { TodoService } from "../../../shared/services/todo.service";
 import { Todo } from "../../../shared/model/todo";
+import { TodoService } from "../../../shared/services/todo.service";
 
 @Component({
   selector: "app-input",

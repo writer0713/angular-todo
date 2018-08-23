@@ -8,7 +8,6 @@ import { SharedModule } from "../shared/shared.module";
   imports: [
     // core modules
     CommonModule,
-    SharedModule,
     CoreRoutingModule
   ],
   declarations: [NavigationComponent],
