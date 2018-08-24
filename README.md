@@ -11,6 +11,7 @@ Angular : 6.0.6
 <hr>
 
 ### Demo
+
 https://writer0713.github.io/angular-todo/home
 
 ### Todos
@@ -24,6 +25,7 @@ https://writer0713.github.io/angular-todo/home
 - [x] Using @Input Directive
 - [x] Using Custom @Directive
 - [x] Using Router
+- [x] Using Redux (with @angular-redux)
 - [ ] Using LocalStorage
 - [ ] Using Firebase
 - [ ] Optimization
