@@ -18,17 +18,13 @@ export class TodoItemComponent implements OnInit {
 
   constructor(private todoService: TodoService) {}
 
-  ngOnInit() {
-    console.log("doneBtn : ", this.doneBtn);
-    console.log("removeBtn : ", this.removeBtn);
-  }
+  ngOnInit() {}
 
   onClickDoneButton(todo: Todo) {
-    console.log("onClickDoneButton : ", todo);
     this.todo.completed = !todo.completed;
   }
 
   onClickRemoveButton(todo: Todo) {
-    this.todoService.todos.delete(todo);
+    this.todoService.remove(todo);
   }
 }

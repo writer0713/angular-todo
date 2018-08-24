@@ -21,9 +21,7 @@ export class RainbowDirective {
     "lightslategrey"
   ];
 
-  constructor() {
-    console.log("rainbow directive");
-  }
+  constructor() {}
 
   @HostListener("keydown")
   selectColor() {

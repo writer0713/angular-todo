@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Todo } from "../../../shared/model/todo";
 import { TodoService } from "../../../shared/services/todo.service";
+import { NgRedux, select } from "@angular-redux/store";
 
 @Component({
   selector: "app-todo-list",
@@ -10,7 +11,13 @@ import { TodoService } from "../../../shared/services/todo.service";
 export class TodoListComponent implements OnInit {
   public todoList: Todo[];
 
-  constructor(public todoService: TodoService) {} // end of constructor
+  @select(s => s.todo.todos)
+  todos;
+
+  constructor(
+    public todoService: TodoService,
+    private ngRedux: NgRedux<Map<string, any>>
+  ) {} // end of constructor
 
   ngOnInit() {}
 }

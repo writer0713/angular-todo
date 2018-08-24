@@ -11,6 +11,5 @@ export class HomeComponent {
 
   constructor() {
     const item: Todo = new Todo("title");
-    console.log(item);
   }
 }

@@ -16,7 +16,6 @@ export class InputComponent implements OnInit {
   constructor(private todoService: TodoService) {}
 
   ngOnInit() {
-    console.log(this.input);
     this.onKeyupEnter();
   }
 
