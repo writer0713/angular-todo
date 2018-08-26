@@ -8,6 +8,8 @@ import {
   INITIAL_STATE,
   rootReducer
 } from "../redux/stores/app.store";
+import { TodoActions } from "../redux/actions/todo.action";
+import { UserActions } from "../redux/actions/user.action";
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import {
     NgReduxModule
   ],
   declarations: [NavigationComponent],
+  providers: [TodoActions, UserActions],
   exports: [NavigationComponent, CoreRoutingModule, NgReduxModule]
 })
 export class CoreModule {

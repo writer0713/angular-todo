@@ -17,7 +17,7 @@ class Address {
   public suite: string;
   public city: string;
   public zipcode: string;
-  public geo: object;
+  public geo: Geo;
 }
 
 class Geo {

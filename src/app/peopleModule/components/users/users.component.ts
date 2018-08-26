@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { User } from "../../model/user";
 import { UserService } from "../../services/user.service";
+import { select } from "@angular-redux/store";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "users",
@@ -10,19 +12,13 @@ import { UserService } from "../../services/user.service";
 export class UsersComponent implements OnInit {
   title = "PEOPLE";
 
-  public users: User[];
+  @select(s => s.user.users)
+  users;
 
   constructor(public userService: UserService) {
     console.log("users Component");
+    this.userService.initUsers();
   }
 
-  ngOnInit() {
-    this.initUsers();
-  }
-
-  private initUsers() {
-    this.userService.getUsers().subscribe(users => {
-      this.users = users;
-    });
-  }
+  ngOnInit() {}
 }
