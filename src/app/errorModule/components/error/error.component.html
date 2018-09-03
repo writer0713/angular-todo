@@ -1,0 +1,7 @@
+<div class="alert alert-danger m-4" role="alert">
+  {{ message }} <br/> Let's go to <a routerLink="/home" class="alert-link">Main page</a>
+</div>
+
+<div class="alert alert-info m-4" role="alert">
+  or You can <u>authenticate</u> with following this <a routerLink="/people" [queryParams]="{admin: 'kim'}" class="alert-link"><b>Link</b></a>.
+</div>
