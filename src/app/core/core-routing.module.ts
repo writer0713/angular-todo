@@ -20,8 +20,12 @@ const routes: Routes = [
   {
     path: "401",
     loadChildren: "../errorModule/error.module#ErrorModule"
-  }
-  { path: "**", redirectTo: "/home" }
+  },
+  {
+    path: "404",
+    loadChildren: "../errorModule/error.module#ErrorModule"
+  },
+  { path: "**", redirectTo: "/404" }
 ];
 
 @NgModule({

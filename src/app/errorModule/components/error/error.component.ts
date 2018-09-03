@@ -8,6 +8,7 @@ import { Router } from "@angular/router";
 })
 export class ErrorComponent implements OnInit {
   message: string;
+  statusCode: string;
 
   constructor(private router: Router) {}
 
@@ -17,8 +18,10 @@ export class ErrorComponent implements OnInit {
 
     if (url.includes("401")) {
       this.message = "NOT AUTHORIZED";
+      this.statusCode = "401";
     } else if (url.includes("404")) {
       this.message = "NOT FOUND URL";
+      this.statusCode = "404";
     }
   }
 }
