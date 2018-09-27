@@ -10,6 +10,9 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "config": {
+    "ionic_source_map": "source-map"
+  },
   "dependencies": {
     "@angular-redux/store": "^9.0.0",
     "@angular/animations": "^6.0.3",
@@ -21,12 +24,16 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "@ngrx/effects": "^6.1.0",
+    "@ngrx/store": "^6.1.0",
     "bootstrap": "^4.1.1",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "redux": "^4.0.0",
     "rxjs": "^6.0.0",
     "tassign": "^1.0.0",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
